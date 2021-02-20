@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mathapp": {
+    "challengeapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mathapp",
+            "outputPath": "dist/challengeapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -62,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mathapp:build"
+            "browserTarget": "challengeapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mathapp:build:production"
+              "browserTarget": "challengeapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mathapp:build"
+            "browserTarget": "challengeapp:build"
           }
         },
         "test": {
@@ -110,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mathapp:serve"
+            "devServerTarget": "challengeapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mathapp:serve:production"
+              "devServerTarget": "challengeapp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "mathapp"
+  "defaultProject": "challengeapp"
 }
